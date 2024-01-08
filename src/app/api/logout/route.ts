@@ -2,7 +2,7 @@ import { NextRequest, NextResponse} from 'next/server'
 
 export async function GET(req: NextRequest){
     try {
-        const response = NextResponse.json({message: 'successfully logged out'},{status: 200})
+        const response = NextResponse.json({message: `successfully logged out ${Math.random()}`},{status: 200})
         response.cookies.set('token', '',{httpOnly: true})
         return response
 
