@@ -13,6 +13,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import React, { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { deleteCookie } from "cookies-next";
 
 interface ButtonProps {
   handleClick: () => void;
@@ -21,7 +22,8 @@ interface ButtonProps {
 export default function PrivateHeader(props: ButtonProps) {
   const route = useRouter();
   const onLogout = async () => {
-    await axios.get("/api/logout");
+    // await axios.get("/api/logout");
+    deleteCookie("token");
     route.push("/login");
   };
   return (

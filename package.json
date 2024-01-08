@@ -16,6 +16,7 @@
     "@mui/material": "^5.15.3",
     "@reduxjs/toolkit": "^2.0.1",
     "axios": "^1.6.5",
+    "cookies-next": "^4.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoos": "^0.0.1-security",
     "mongoose": "^8.0.3",

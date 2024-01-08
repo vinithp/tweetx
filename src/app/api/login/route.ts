@@ -24,7 +24,7 @@ export async function POST(req: NextRequest){
         }
         const token = await jws.sign(tokenData,process.env.TOKEN_SECRET!, {expiresIn: "1d"}) 
         const response = NextResponse.json({data:user ,message:'logged in successfully'},{status: 200})
-        response.cookies.set('token', token,{httpOnly:true})
+        response.cookies.set('token', token)
         return response
 
     } catch (error: any) {
